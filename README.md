@@ -2,7 +2,14 @@
   <h1>🎓 EduData AI V3</h1>
   <p><strong>Automação inteligente para identificação de aprovados em vestibulares.</strong></p>
 </div>
-
+ <p>
+   <div align="center">
+    <img src="https://img.shields.io/badge/Versão-3.0-blue.svg" alt="Versão">
+    <img src="https://img.shields.io/badge/Python-3.9%2B-blue" alt="Python">
+    <img src="https://img.shields.io/badge/Status-Em_Desenvolvimento-brightgreen.svg" alt="Status">
+    <img src="https://img.shields.io/badge/Licença-MIT-green.svg" alt="Licença">
+     </div>
+  </p>
 <hr>
 
 ## 📖 Sobre o Projeto
