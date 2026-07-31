@@ -1,130 +1,124 @@
-# 🎓 EduData AI
+# EduData AI
 
 > **Documento de Visão do Produto**
-
-O **EduData AI** é uma ferramenta interna desenvolvida para automatizar a identificação de alunos do **Colégio Olimpo** aprovados em processos seletivos brasileiros.
-
----
-
-# 📌 Visão do Produto
-
-## 🎯 Missão
-
-O sistema utiliza **Inteligência Artificial Local** exclusivamente para extrair informações de documentos oficiais, sendo toda a lógica de negócio responsável pelo cruzamento de dados implementada pelo próprio **EduData AI**.
-
-Seu objetivo é **reduzir o tempo gasto com conferências manuais** e **aumentar a confiabilidade dos relatórios** entregues à gestão.
+>
+> Ferramenta interna para automatizar a identificação de alunos do **Colégio Olimpo** aprovados em processos seletivos brasileiros.
 
 ---
 
-# 👤 Público-alvo
+## Visão do Produto
 
-O sistema possui **um único usuário**.
+### Missão
 
-> **Analista de Dados do Colégio Olimpo**
+O **EduData AI** utiliza **Inteligência Artificial Local** exclusivamente para extrair informações de documentos oficiais, sendo toda a lógica de negócio responsável pelo cruzamento de dados implementada pelo próprio sistema.
 
-Não existe, neste momento, intenção de comercialização ou disponibilização pública da ferramenta.
+Seu objetivo é:
 
-> **Decisão arquitetural:** todas as escolhas de projeto devem considerar esse contexto.
+- reduzir o tempo gasto com conferências manuais;
+- aumentar a confiabilidade dos relatórios entregues à gestão.
 
 ---
 
-# ❗ Problema
+## Público-alvo
+
+| Informação | Descrição |
+|------------|-----------|
+| Usuário | Analista de Dados do Colégio Olimpo |
+| Comercialização | Não prevista |
+| Disponibilização pública | Não prevista |
+
+> **Diretriz de arquitetura**
+>
+> Todas as decisões arquiteturais deverão considerar que o sistema possui apenas um usuário.
+
+---
+
+## Problema
 
 Após a divulgação dos resultados dos vestibulares, torna-se necessário identificar rapidamente quais aprovados pertencem ao **Colégio Olimpo**.
 
 Atualmente esse processo depende da comparação entre:
 
-- 📄 Base institucional de alunos
-- 📄 Lista oficial de aprovados
+- Base institucional de alunos;
+- Lista oficial de aprovados.
 
 Esse procedimento precisa ser realizado com **alta precisão**.
 
 ---
 
-# 💡 Solução
+## Solução
 
-O **EduData AI** automatiza todo esse processo.
+O **EduData AI** automatiza esse processo.
 
-## Fluxo resumido
+### Fluxo de processamento
 
-┌──────────────────────────────┐
-│      Lista Oficial (PDF)     │
-└──────────────┬───────────────┘
-               │
-               ▼
-┌──────────────────────────────┐
-│     Extração por IA Local    │
-└──────────────┬───────────────┘
-               │
-               ▼
-┌──────────────────────────────┐
-│         Normalização         │
-└──────────────┬───────────────┘
-               │
-               ▼
-┌──────────────────────────────┐
-│ Cruzamento com Base Interna  │
-└──────────────┬───────────────┘
-               │
-               ▼
-┌──────────────────────────────┐
-│         Relatórios           │
-└──────────────────────────────┘
+```text
+Lista Oficial (PDF)
+        │
+        ▼
+Extração por IA Local
+        │
+        ▼
+Normalização
+        │
+        ▼
+Cruzamento com Base Institucional
+        │
+        ▼
+Relatórios
 ```
 
 ---
 
-# 🎯 Objetivo Principal
+## Objetivo Principal
 
 Identificar automaticamente quais candidatos aprovados pertencem ao **Colégio Olimpo**.
 
-> Este é o principal objetivo do sistema.
-
-Todas as funcionalidades deverão contribuir **direta ou indiretamente** para esse objetivo.
+> Todas as funcionalidades do sistema deverão contribuir direta ou indiretamente para esse objetivo.
 
 ---
 
-# 📦 Escopo Atual
+## Escopo Atual
 
-Nesta versão, o sistema deverá ser capaz de:
+Nesta versão o sistema deverá:
 
-- ✅ Receber PDFs contendo listas oficiais de aprovados;
-- ✅ Extrair os dados utilizando IA Local;
-- ✅ Estruturar essas informações;
-- ✅ Cruzar os dados com a base institucional;
-- ✅ Gerar relatórios finais.
+- Receber PDFs contendo listas oficiais de aprovados;
+- Extrair os dados utilizando IA Local;
+- Estruturar essas informações;
+- Cruzar os dados com a base institucional;
+- Gerar relatórios finais.
 
 ---
 
-# 🚫 Fora do Escopo
+## Fora do Escopo
 
-Nesta versão o sistema **NÃO** deverá:
+Nesta versão o sistema **não deverá**:
 
-- ❌ Buscar PDFs automaticamente;
-- ❌ Monitorar sites;
-- ❌ Fazer scraping;
-- ❌ Interpretar editais;
-- ❌ Processar cronogramas;
-- ❌ Processar chamadas;
-- ❌ Baixar documentos da internet.
+- Buscar PDFs automaticamente;
+- Monitorar sites;
+- Fazer scraping;
+- Interpretar editais;
+- Processar cronogramas;
+- Processar chamadas;
+- Baixar documentos da internet.
 
+> **Observação**
+>
 > Todos os documentos serão fornecidos manualmente pelo usuário.
 
 ---
 
-# 🤖 Papel da IA
+## Papel da Inteligência Artificial
 
-A **Inteligência Artificial não toma decisões**.
+A Inteligência Artificial **não toma decisões**.
 
-Sua única responsabilidade é transformar documentos não estruturados em **dados estruturados**.
+Sua única responsabilidade é transformar documentos não estruturados em dados estruturados.
 
 Toda decisão de negócio pertence ao **EduData AI**.
 
 ---
 
-# 🏛️ Princípios
-
-O projeto seguirá os seguintes princípios:
+## Princípios
 
 | Nº | Princípio |
 |:--:|-----------|
@@ -138,17 +132,15 @@ O projeto seguirá os seguintes princípios:
 
 ---
 
-# 🚀 Visão de Longo Prazo
+## Visão de Longo Prazo
 
 Embora inicialmente o sistema seja utilizado apenas pelo **Analista de Dados do Colégio Olimpo**, sua arquitetura deverá permitir a inclusão de novos vestibulares sem necessidade de reescrever o núcleo da aplicação.
 
-Ao mesmo tempo, novas funcionalidades serão adicionadas **somente quando existir necessidade real**, preservando a simplicidade, a manutenção e a evolução do projeto.
-
----
+Entretanto, funcionalidades serão adicionadas apenas quando existir necessidade real.
 
 ---
 
 <p align="center">
   <strong>EduData AI</strong><br>
-  <em>Automação inteligente para identificação de aprovados.</em>
+  <sub>Automação inteligente para identificação de aprovados</sub>
 </p>
