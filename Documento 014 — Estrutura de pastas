@@ -1,0 +1,46 @@
+src/
+│
+├── application/
+│   ├── pipeline.py
+│   └── orchestrator.py
+│
+├── domain/
+│   ├── aluno.py
+│   ├── aprovado.py
+│   ├── base_institucional.py
+│   ├── lista_oficial.py
+│   ├── processo_seletivo.py
+│   ├── resultado_cruzamento.py
+│   ├── status_cruzamento.py
+│   └── __init__.py
+│
+├── extraction/
+│   ├── extractors/
+│   ├── parsers/
+│   ├── adapters/
+│   └── __init__.py
+│
+├── normalization/
+│   ├── nome.py
+│   └── __init__.py
+│
+├── matching/
+│   ├── engine.py
+│   └── __init__.py
+│
+├── reporting/
+│   ├── generators/
+│   └── __init__.py
+│
+├── infrastructure/
+│   ├── pdf/
+│   ├── ai/
+│   ├── excel/
+│   └── __init__.py
+│
+├── shared/
+│   ├── exceptions.py
+│   ├── constants.py
+│   └── __init__.py
+│
+└── main.py
